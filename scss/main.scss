@@ -1,0 +1,56 @@
+@import "scss/normalize";
+
+body {
+  background-color: rgb(26, 188, 156);
+  font-family: 'Roboto Mono', monospace;
+  transition: 0.5s;
+}
+
+.box {
+  cursor: pointer;
+  opacity: 0.8;
+  border-radius: 10%;
+  width: 500px;
+  margin: 10% auto 0;
+  height: 500px;
+  background: rgb(231, 76, 60);
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: 0 0 53px 0 rgba(231,76,60,1);
+  transition: 0.5s;
+
+  &:hover {
+    box-shadow: 0 0 88px 0 rgba(192,57,43,1);
+  }
+
+  .container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  span {
+    display: block;
+    margin-bottom: 5%;
+  }
+
+  &__range {
+    cursor: pointer;
+    appearance: none;
+    display: block;
+    margin-bottom: 15%;
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      background: rgb(231, 76, 60);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
